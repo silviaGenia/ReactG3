@@ -1,18 +1,15 @@
 console.log("Clase Noche")
 
-const persona = {
-  nombre: 'Carlos',
-  apellido: 'Herrera',
-  edad: 12,
-  direccion: {
-    ciudad: 'Sucre'
-  }
-}
+import frutas, { verduras } from './data/frutas'
+
+const getFrutasById = (id) => frutas.find((fruta) => fruta.id === id)
+
+console.log(getFrutasById(2))
+
+const getFrutasByOwner = (color) => frutas.filter((fruta) => fruta.color === color)
+
+console.log(getFrutasByOwner("rojo"))
+
+console.log(verduras)
 
 
-//console.table(persona)
-
-const persona2 = { ...persona }
-persona2.nombre = "Dayana"
-console.log(persona)
-console.log(persona2)
