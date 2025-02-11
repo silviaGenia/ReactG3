@@ -7,6 +7,7 @@ import { PropType } from './PropType'
 import { NavBar } from './NavBar'
 import { CounterApp } from './CounterApp'
 import { CountApp } from './CountApp'
+import { ButtonApp } from './ButtonApp'
 
 
 
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
     {/* <NavBar value={12} /> */}
     {/* <CounterApp /> */}
-    <CountApp value={15} />
+    {/* <CountApp value={15} /> */}
+    <ButtonApp />
   </React.StrictMode>
 )
