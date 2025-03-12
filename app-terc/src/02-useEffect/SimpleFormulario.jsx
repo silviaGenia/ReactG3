@@ -1,10 +1,11 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { Mensaje } from "./Mensaje"
 
 
 export const SimpleFormulario = () => {
 
   const [formState, setFormState] = useState({
-    username: "karla",
+    username: "karla2",
     email: "karla@gmail.com"
   })
 
@@ -13,9 +14,23 @@ export const SimpleFormulario = () => {
 
   const onInputChange = ({ target }) => {
     const { name, value } = target
-    console.log({ name, value })
+    setFormState({
+      ...formState,
+      [name]: value
+    })
   }
 
+  useEffect(() => {
+    //console.log("useEffect Llamando!!!!")
+  }, [])
+
+  useEffect(() => {
+    //console.log("useEffect Llamando!!!!")
+  }, [formState])
+
+  useEffect(() => {
+    //console.log("email cambiando!!!!")
+  }, [email])
 
   return (
     <>
@@ -37,6 +52,7 @@ export const SimpleFormulario = () => {
         value={email}
         onChange={onInputChange}
       />
+      {username === "karla2" && <Mensaje />}
     </>
   )
 }

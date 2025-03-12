@@ -10,12 +10,9 @@ import { SimpleFormulario } from './02-useEffect/SimpleFormulario'
 
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    {/* <StoreApp title=" Clase" /> */}
-    {/* <CounterApp /> */}
-    {/* <CounterCustomHook /> */}
-    {/*  <LuzHabitacion /> */}
-    <SimpleFormulario />
-  </StrictMode>,
+  //<StrictMode>
+
+  <SimpleFormulario />
+  //</StrictMode>,
 )
 
